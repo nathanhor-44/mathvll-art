@@ -22,16 +22,26 @@
   </header>
 
   <main>
-    <form action="mailto:tonemail@gmail.com" method="post" enctype="text/plain">
+    <form id="demandeForm" action="https://formsubmit.co/nathanhor44@gmail.com" method="POST">
+      <!-- Configuration FormSubmit pour redirection et options -->
+      <input type="hidden" name="_subject" value="Nouvelle demande de tableau personnalisé">
+      <input type="hidden" name="_next" value="https://votresite.com/merci.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="text" name="_honey" style="display:none">
 
       <label for="nom">Nom complet :</label>
-      <input type="text" id="nom" name="Nom" placeholder="Votre nom" required>
+      <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
 
       <label for="email">Email :</label>
-      <input type="email" id="email" name="Email" placeholder="votre@email.com" required>
+      <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+
+      <label for="telephone">Téléphone (optionnel) :</label>
+      <input type="tel" id="telephone" name="telephone" placeholder="+33 6 12 34 56 78">
 
       <label for="taille">Taille souhaitée :</label>
-      <select id="taille" name="Taille">
+      <select id="taille" name="taille" required>
+        <option value="">Sélectionnez une taille</option>
         <option>30 x 40 cm</option>
         <option>50 x 70 cm</option>
         <option>80 x 100 cm</option>
@@ -40,7 +50,8 @@
       </select>
 
       <label for="type">Type de création :</label>
-      <select id="type" name="Type">
+      <select id="type" name="type" required>
+        <option value="">Sélectionnez un type</option>
         <option>Portrait</option>
         <option>Paysage</option>
         <option>Abstrait</option>
@@ -49,8 +60,18 @@
         <option>Autre (précisez en description)</option>
       </select>
 
+      <label for="budget">Budget estimé :</label>
+      <select id="budget" name="budget">
+        <option value="">Sélectionnez un budget</option>
+        <option>Moins de 200€</option>
+        <option>200€ - 500€</option>
+        <option>500€ - 1000€</option>
+        <option>Plus de 1000€</option>
+        <option>À discuter</option>
+      </select>
+
       <label for="description">Description de votre projet :</label>
-      <textarea id="description" name="Description" placeholder="Décrivez votre idée : couleurs souhaitées, ambiance, inspiration, usage prévu de l'œuvre..."></textarea>
+      <textarea id="description" name="description" placeholder="Décrivez votre idée : couleurs souhaitées, ambiance, inspiration, usage prévu de l'œuvre..." required></textarea>
 
       <button type="submit">✉️ Envoyer ma demande</button>
 
@@ -62,14 +83,14 @@
       <div class="footer-contact">
         <h3>Contact</h3>
         <p>
-          📩 <a href="mailto:tonemail@gmail.com?subject=Demande%20tableau">tonemail@gmail.com</a>
+          📩 <a href="mailto:nathanhor44@gmail.com?subject=Demande%20tableau">nathanhor44@gmail.com</a>
         </p>
         <p>
           📷 <a href="https://www.instagram.com/tonpseudo/" target="_blank">@tonpseudo</a>
         </p>
       </div>
       <div class="footer-nav">
-        <a href="../index.html">Galerie</a>
+        <a href="index.html">Galerie</a>
         <a href="avis.html">Avis clients</a>
         <a href="createur.html">À propos</a>
       </div>
