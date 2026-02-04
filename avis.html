@@ -50,26 +50,54 @@
 
   </main>
 
-  <!-- Call to action -->
+  <!-- Formulaire pour laisser un avis -->
   <section class="cta">
-    <h2>Envie de laisser votre avis ?</h2>
+    <h2>Laissez votre avis</h2>
     <p>Partagez votre expérience avec la communauté</p>
-    <a href="mailto:tonemail@gmail.com?subject=Mon%20avis" class="btn-primary">Envoyer mon avis</a>
   </section>
+
+  <form id="avisForm" action="https://formsubmit.co/nathanhor44@gmail.com" method="POST">
+    <!-- Configuration FormSubmit -->
+    <input type="hidden" name="_subject" value="Nouveau avis client">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    <input type="text" name="_honey" style="display:none">
+    
+    <label for="nom">Votre nom :</label>
+    <input type="text" id="nom" name="nom" placeholder="Prénom et initiale du nom (ex: Marie D.)" required>
+
+    <label for="email">Email (ne sera pas publié) :</label>
+    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+
+    <label for="note">Note :</label>
+    <select id="note" name="note" required>
+      <option value="">Sélectionnez une note</option>
+      <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐ Excellent</option>
+      <option value="⭐⭐⭐⭐">⭐⭐⭐⭐ Très bien</option>
+      <option value="⭐⭐⭐">⭐⭐⭐ Bien</option>
+      <option value="⭐⭐">⭐⭐ Moyen</option>
+      <option value="⭐">⭐ Décevant</option>
+    </select>
+
+    <label for="avis">Votre avis :</label>
+    <textarea id="avis" name="avis" placeholder="Partagez votre expérience..." required></textarea>
+
+    <button type="submit">✉️ Envoyer mon avis</button>
+  </form>
 
   <footer>
     <div class="footer-content">
       <div class="footer-contact">
         <h3>Contact</h3>
         <p>
-          📩 <a href="mailto:tonemail@gmail.com?subject=Avis">tonemail@gmail.com</a>
+          📩 <a href="mailto:nathanhor44@gmail.com?subject=Contact">nathanhor44@gmail.com</a>
         </p>
         <p>
           📷 <a href="https://www.instagram.com/tonpseudo/" target="_blank">@tonpseudo</a>
         </p>
       </div>
       <div class="footer-nav">
-        <a href="../index.html">Galerie</a>
+        <a href="index.html">Galerie</a>
         <a href="demande.html">Demande personnalisée</a>
         <a href="createur.html">À propos</a>
       </div>
